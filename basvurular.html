@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEDxYeal Youth - Applications</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="page-hidden">
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="assets/tedxlogo.jpeg" alt="TEDx Logo">
+            </div>
+            <ul class="menu">
+                <li><a href="anasayfa.html">Home</a></li>
+                <li><a href="tema.html">Theme</a></li>
+                <li><a href="basvurular.html" class="active">Applications</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero hero-application">
+            <div class="hero-content">
+                <h1>Application Form</h1>
+                <p>Light the First Spark - Take Action</p>
+            </div>
+        </section>
+
+        <section class="application-info">
+            <h2>Why Should You Apply?</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>🎯 A Select Community</h3>
+                    <p>Connect with future entrepreneurs and change-makers</p>
+                </div>
+                <div class="info-card">
+                    <h3>💡 Inspiration Source</h3>
+                    <p>Develop innovative thinking and effective communication skills</p>
+                </div>
+                <div class="info-card">
+                    <h3>🚀 Discover Your Potential</h3>
+                    <p>Find your true potential and show it to the world</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="application-form">
+            <h2>Fill Out the Application Form</h2>
+            <form class="form-container">
+                <div class="form-group">
+                    <label for="ad">Your Name *</label>
+                    <input type="text" id="ad" name="ad" placeholder="Your name and surname" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefon">Phone *</label>
+                    <input type="tel" id="telefon" name="telefon" placeholder="+90 555 123 45 67" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="yas">Age *</label>
+                    <input type="number" id="yas" name="yas" placeholder="15" min="13" max="30" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="okul">School / Institution *</label>
+                    <input type="text" id="okul" name="okul" placeholder="School or institution name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="bolum">Department / Field *</label>
+                    <input type="text" id="bolum" name="bolum" placeholder="Department or field of study" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="motivasyon">Why do you want to join TEDxYeal Youth? *</label>
+                    <textarea id="motivasyon" name="motivasyon" rows="5" 
+                        placeholder="Bize ilk kıvılcımının nerede yanıp söndüğünü anlat..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="ilham">Is there an idea or person that inspires you? *</label>
+                    <textarea id="ilham" name="ilham" rows="4" 
+                        placeholder="An idea, person, or event that inspires you..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="katki">How do you want to contribute to the community? *</label>
+                    <textarea id="katki" name="katki" rows="4" 
+                        placeholder="The ideas and actions you will bring to the future..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="referans">Social Media / Portfolio Link (Optional)</label>
+                    <input type="url" id="referans" name="referans" placeholder="https://...">
+                </div>
+
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="consent" name="consent" required>
+                    <label for="consent">TEDxYeal Youth'un iletişim bilgilerini kullanarak bana haberdar etmesine izin veriyorum *</label>
+                </div>
+
+                <button type="submit" class="btn btn-large">Apply Now</button>
+            </form>
+        </section>
+
+        <section class="application-timeline">
+            <h2>Application Timeline</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Application Period</h3>
+                        <p>The application period has started</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Review of Applications</h3>
+                        <p>Your applications are being carefully reviewed</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Selected Applicants Announcement</h3>
+                        <p>Selected applicants will be notified</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Event Day</h3>
+                        <p>Join TEDxYeal Youth and ignite your first spark!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>TEDxYeal Youth</h3>
+                <p>Geleceğin fikirlerini bugün yakala</p>
+            </div>
+            <div class="footer-section">
+                <h4>Hızlı Bağlantılar</h4>
+                <ul>
+                    <li><a href="anasayfa.html">Anasayfa</a></li>
+                    <li><a href="tema.html">Tema</a></li>
+                    <li><a href="basvurular.html">Başvurular</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Bizi Takip Edin</h4>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="X"><i class="fab fa-x"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 TEDxYeal Youth. Tüm hakları saklıdır.</p>
+            <p>#AteşiYak</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
