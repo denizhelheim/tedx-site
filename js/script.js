@@ -1,4 +1,4 @@
-// Hamburger Menu Toggle
+// Hamburger Menü
 const hamburger = document.querySelector('.hamburger');
 const menu = document.querySelector('.menu');
 
@@ -9,29 +9,26 @@ if (hamburger && menu) {
     });
 }
 
-// Close menu when clicking on a link
+// Menü linkine tıklandığında menüyü kapat
 document.querySelectorAll('.menu a').forEach(link => {
     link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        menu.classList.remove('active');
+        if (hamburger) hamburger.classList.remove('active');
+        if (menu) menu.classList.remove('active');
     });
 });
 
-// Smooth scrolling for navigation links
+// Anchor linklerde smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     });
 });
 
-// Enhanced scroll animations
+// Scroll animasyonları
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -46,7 +43,7 @@ const observer = new IntersectionObserver(function(entries) {
     });
 }, observerOptions);
 
-// Animate cards on scroll
+// Kartları animasyonla göster
 document.querySelectorAll('.service-card, .feature-card, .meaning-card, .info-card').forEach(card => {
     card.style.opacity = '0';
     card.style.transform = 'translateY(30px) scale(0.95)';
@@ -54,7 +51,7 @@ document.querySelectorAll('.service-card, .feature-card, .meaning-card, .info-ca
     observer.observe(card);
 });
 
-// Animate sections on scroll
+// Bölümleri animasyonla göster
 document.querySelectorAll('section').forEach(section => {
     section.style.opacity = '0';
     section.style.transform = 'translateY(20px)';
@@ -62,7 +59,7 @@ document.querySelectorAll('section').forEach(section => {
     observer.observe(section);
 });
 
-// Parallax effect for hero
+// Hero parallax efekti
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const hero = document.querySelector('.hero');
@@ -71,37 +68,33 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Form submission with better feedback
-const form = document.querySelector('.contact form');
-if (form) {
-    form.addEventListener('submit', function(e) {
+// İletişim formu
+const contactForm = document.querySelector('.contact form');
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
-        const submitBtn = form.querySelector('button[type="submit"]');
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
         const originalText = submitBtn.textContent;
-
         submitBtn.textContent = 'Gönderiliyor...';
         submitBtn.disabled = true;
-
         setTimeout(() => {
             alert('Mesajınız başarıyla gönderildi!');
-            form.reset();
+            contactForm.reset();
             submitBtn.textContent = originalText;
             submitBtn.disabled = false;
         }, 1000);
     });
 }
 
-// Application form submission
+// Başvuru formu
 const applicationForm = document.querySelector('.application-form form');
 if (applicationForm) {
     applicationForm.addEventListener('submit', function(e) {
         e.preventDefault();
         const submitBtn = applicationForm.querySelector('button[type="submit"]');
         const originalText = submitBtn.textContent;
-
         submitBtn.textContent = 'Başvuru Gönderiliyor...';
         submitBtn.disabled = true;
-
         setTimeout(() => {
             alert('Başvurunuz başarıyla gönderildi! En kısa sürede sizinle iletişime geçeceğiz.');
             applicationForm.reset();
@@ -111,7 +104,7 @@ if (applicationForm) {
     });
 }
 
-// Typing effect for hero text (optional)
+// Yazı efekti
 function typeWriter(element, text, speed = 100) {
     let i = 0;
     element.textContent = '';
@@ -125,6 +118,7 @@ function typeWriter(element, text, speed = 100) {
     type();
 }
 
+// Sayfa geçiş animasyonları
 function setupPageTransitions() {
     document.querySelectorAll('a[href$=".html"]').forEach(link => {
         if (link.target === '_blank' || link.hasAttribute('download')) return;
@@ -148,16 +142,17 @@ function setupPageTransitions() {
     });
 }
 
-// Initialize typing effect on page load
+// Sayfa yüklendiğinde başlat
 document.addEventListener('DOMContentLoaded', () => {
     document.body.classList.add('page-visible');
     document.body.classList.remove('page-hidden');
 
     const heroTitle = document.querySelector('.hero-content h1');
-    if (heroTitle && heroTitle.textContent === '#AteşiYak') {
+    if (heroTitle && heroTitle.textContent.trim() === '#AteşiYak') {
         typeWriter(heroTitle, '#AteşiYak', 150);
     }
+
     setupPageTransitions();
 });
 
-console.log('Web sitesi başarıyla yüklendi ve modernleştirildi! 🚀');
+console.log('TEDxYeal Youth sitesi başarıyla yüklendi! 🔥');
