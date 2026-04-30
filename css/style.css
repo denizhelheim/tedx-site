@@ -1609,3 +1609,181 @@ footer {
         min-height: 48px;
     }
 }
+/* ============================================
+   KADROMUZ SAYFASI
+   ============================================ */
+
+.hero-kadromuz {
+    background: linear-gradient(135deg, #1a1a1a 0%, #333333 50%, #0a0a0a 100%);
+}
+
+.hero-kadromuz h1 {
+    color: #ffffff;
+    text-shadow: 0 4px 15px rgba(255, 0, 0, 0.5);
+}
+
+.hero-kadromuz p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.kadro-grid-section {
+    padding: 3rem 1rem;
+}
+
+.kadro-grid-section h2 {
+    margin-bottom: 2rem;
+}
+
+.kadro-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.kadro-card {
+    background: linear-gradient(135deg, #1a1a1a 0%, #252525 100%);
+    border: 2px solid rgba(255, 0, 0, 0.3);
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.kadro-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(255, 0, 0, 0.4);
+    border-color: var(--primary-color);
+}
+
+.kadro-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .kadro-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .kadro-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem;
+    }
+    
+    .kadro-card {
+        border-radius: 0.75rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .kadro-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* ============================================
+   GERİ SAYIM SAYACI
+   ============================================ */
+
+.countdown-section {
+    text-align: center;
+    padding: 2.5rem 1rem;
+    background: linear-gradient(135deg, rgba(255, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.2) 100%);
+    border-bottom: 1px solid rgba(255, 0, 0, 0.2);
+}
+
+.countdown-section h2 {
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.countdown-item {
+    background: rgba(255, 0, 0, 0.1);
+    border: 2px solid rgba(255, 0, 0, 0.4);
+    border-radius: 1rem;
+    padding: 1.25rem 1.5rem;
+    min-width: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.countdown-item:hover {
+    background: rgba(255, 0, 0, 0.2);
+    border-color: var(--primary-color);
+    transform: scale(1.05);
+}
+
+.countdown-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+    line-height: 1;
+    margin-bottom: 0.4rem;
+}
+
+.countdown-label {
+    font-size: 0.9rem;
+    color: #cccccc;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+    .countdown-section h2 {
+        font-size: 1.2rem;
+    }
+    
+    .countdown {
+        gap: 1rem;
+    }
+    
+    .countdown-item {
+        padding: 1rem 1.25rem;
+        min-width: 75px;
+    }
+    
+    .countdown-number {
+        font-size: 2rem;
+    }
+    
+    .countdown-label {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .countdown-item {
+        padding: 0.85rem 1rem;
+        min-width: 65px;
+    }
+    
+    .countdown-number {
+        font-size: 1.7rem;
+    }
+    
+    .countdown-label {
+        font-size: 0.7rem;
+    }
+}

@@ -155,4 +155,48 @@ document.addEventListener('DOMContentLoaded', () => {
     setupPageTransitions();
 });
 
+// ============================================
+// GERİ SAYIM SAYACI (22 Haziran 2026)
+// ============================================
+
+function startCountdown() {
+    const countdownElement = document.getElementById('countdown');
+    if (!countdownElement) return; // Sadece sayacın olduğu sayfada çalışır
+
+    const targetDate = new Date('2026-06-22T00:00:00').getTime();
+
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+
+        if (distance < 0) {
+            document.getElementById('days').textContent = '00';
+            document.getElementById('hours').textContent = '00';
+            document.getElementById('minutes').textContent = '00';
+            document.getElementById('seconds').textContent = '00';
+            clearInterval(countdownInterval);
+            return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById('days').textContent = String(days).padStart(2, '0');
+        document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+        document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+        document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+    }
+
+    updateCountdown(); // İlk çalıştırma
+    const countdownInterval = setInterval(updateCountdown, 1000);
+}
+
+// DOM yüklendiğinde başlat
+document.addEventListener('DOMContentLoaded', () => {
+    // ... mevcut kodlar aynen kalacak
+    startCountdown();
+});
+
 console.log('TEDxYeal Youth sitesi başarıyla yüklendi! 🔥');
