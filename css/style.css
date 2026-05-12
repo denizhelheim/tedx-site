@@ -1787,3 +1787,56 @@ footer {
         font-size: 0.7rem;
     }
 }
+
+/* Hakkında sayfası hero */
+.hero-hakkinda {
+    background: linear-gradient(135deg, #1a1a1a 0%, #333333 50%, #0a0a0a 100%);
+}
+
+/* Sponsorlar sayfası hero */
+.hero-sponsorlar {
+    background: linear-gradient(135deg, #1a1a1a 0%, #444444 50%, #0a0a0a 100%);
+}
+
+/* Sponsor grid */
+.sponsor-grid-section {
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.sponsor-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.sponsor-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 0, 0, 0.3);
+    border-radius: 1rem;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.sponsor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(255, 0, 0, 0.3);
+    border-color: var(--primary-color);
+}
+
+.sponsor-card img {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+
+.sponsor-card p {
+    color: #cccccc;
+    font-weight: 500;
+}
+
+.about-content .btn {
+    display: table;
+    margin: 1.5rem auto 0;
+}
